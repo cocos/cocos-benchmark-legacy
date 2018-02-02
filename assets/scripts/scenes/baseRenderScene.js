@@ -38,7 +38,7 @@ cc.Class({
 
     resetTestConfig: function () {
         this.beginTestTime = 5;
-        this.testDurationTime = 20;
+        this.testDurationTime = 40;
     },
 
     autoStartTest: function () {
