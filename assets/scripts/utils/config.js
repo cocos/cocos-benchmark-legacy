@@ -126,12 +126,12 @@ config.TEST_CASE = [
         name: "Load Prefab Test",
         scene: "loadPrefabTest",
         args: {
-            osx_chrome: { count: 10 },
-            ios_safari: { count: 10 },
-            ios_chrome: { count: 10 },
-            android_chrome: { count: 10 },
-            android_qq: { count: 10 },
-            default: { count: 10 }
+            osx_chrome: { count: 20 },
+            ios_safari: { count: 20 },
+            ios_chrome: { count: 20 },
+            android_chrome: { count: 20 },
+            android_qq: { count: 20 },
+            default: { count: 20 }
         },
         auto: true,
     },
