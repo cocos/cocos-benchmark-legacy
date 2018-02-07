@@ -143,7 +143,7 @@ config.TEST_CASE = [
 ];
 
 config.setSceneArgs = function (testCaseInfo) {
-    let args = {};
+    let args = null;
     if (testCaseInfo.args) {
         switch (cc.sys.os) {
             case cc.sys.OS_OSX:
