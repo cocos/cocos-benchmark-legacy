@@ -17,6 +17,7 @@ config.TEST_CASE = [
         name: "Bunny Fixed Count Test",
         scene: "bunnyFixedCountTest",
         args: { 
+            windows_chrome: { count: 5000 },
             osx_chrome: { count: 5000 },
             ios_safari: { count: 2600 },
             ios_chrome: { count: 2600 },
@@ -34,7 +35,8 @@ config.TEST_CASE = [
     {
         name: "Prefab Bunny Fixed Count Test",
         scene: "prefabBunnyFixedCountTest",
-        args: { 
+        args: {
+            windows_chrome: { count: 5000 }, 
             osx_chrome: { count: 5000 },
             ios_safari: { count: 2600 },
             ios_chrome: { count: 2600 },
@@ -48,6 +50,7 @@ config.TEST_CASE = [
         name: "Bunny Add/Remove Test",
         scene: "bunnyDynamicTest",
         args: { 
+            windows_chrome: { totalCount: 5000, dynamicCount: 100 },
             osx_chrome: { totalCount: 5000, dynamicCount: 100 },
             ios_safari: { totalCount: 2500, dynamicCount: 100 },
             ios_chrome: { totalCount: 2500, dynamicCount: 100 },
@@ -61,6 +64,7 @@ config.TEST_CASE = [
         name: "Bunny Transform Tree Test",
         scene: "bunnyTreeTest",
         args: {
+            windows_chrome: { depth: 5, countPerDepth: 6 },
             osx_chrome: { depth: 5, countPerDepth: 6 },
             ios_safari: { depth: 4, countPerDepth: 6 },
             ios_chrome: { depth: 4, countPerDepth: 6 },
@@ -74,6 +78,7 @@ config.TEST_CASE = [
         name: "Bunny Active/Inactive Test",
         scene: "bunnyActiveTest",
         args: {
+            windows_chrome: { depth: 5, countPerDepth: 6 },
             osx_chrome: { depth: 5, countPerDepth: 6 },
             ios_safari: { depth: 4, countPerDepth: 6 },
             ios_chrome: { depth: 4, countPerDepth: 6 },
@@ -87,6 +92,7 @@ config.TEST_CASE = [
         name: "Bunny Transform Animation Test",
         scene: "bunnyTransformAnimationTest",
         args: {
+            windows_chrome: { count: 5000 },
             osx_chrome: { count: 5000 },
             ios_safari: { count: 2600 },
             ios_chrome: { count: 2600 },
@@ -100,6 +106,7 @@ config.TEST_CASE = [
         name: "Bunny Frame Animation Test",
         scene: "bunnyFrameAnimationTest",
         args: {
+            windows_chrome: { count: 5000 },
             osx_chrome: { count: 5000 },
             ios_safari: { count: 2600 },
             ios_chrome: { count: 2600 },
@@ -113,6 +120,7 @@ config.TEST_CASE = [
         name: "Bunny Transform Action Test",
         scene: "bunnyTransformActionTest",
         args: {
+            windows_chrome: { count: 5000 },
             osx_chrome: { count: 5000 },
             ios_safari: { count: 2600 },
             ios_chrome: { count: 2600 },
@@ -126,6 +134,7 @@ config.TEST_CASE = [
         name: "Load Prefab Test",
         scene: "loadPrefabTest",
         args: {
+            windows_chrome: { count: 20 },
             osx_chrome: { count: 20 },
             ios_safari: { count: 20 },
             ios_chrome: { count: 20 },
@@ -146,6 +155,15 @@ config.setSceneArgs = function (testCaseInfo) {
     let args = null;
     if (testCaseInfo.args) {
         switch (cc.sys.os) {
+            case cc.sys.OS_WINDOWS:
+                switch (cc.sys.browserType) {
+                    case cc.sys.BROWSER_TYPE_CHROME:
+                        args = testCaseInfo.args.windows_chrome;
+                        break;
+                    default:
+                        break;
+                }
+                break;
             case cc.sys.OS_OSX:
                 switch (cc.sys.browserType) {
                     case cc.sys.BROWSER_TYPE_CHROME:
@@ -155,7 +173,7 @@ config.setSceneArgs = function (testCaseInfo) {
                         break;
                 }
                 break;
-            case cc.sys.OS_IOS:
+            case cc.sys.OS_IOS: 
                 switch (cc.sys.browserType) {
                     case cc.sys.BROWSER_TYPE_SAFARI:
                         args = testCaseInfo.args.ios_safari;
