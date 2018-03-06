@@ -87,8 +87,8 @@ cc.Class({
                         bunny.anchorY = 1;
                         //bunny.alpha = 0.3 + Math.random() * 0.7;
                         this.bunnys[curDepth].push(bunny);
-                        bunny.scale = 0.5 + Math.random() * 0.5;
-                        bunny.rotation = 360 * (Math.random() * 0.2 - 0.1);
+                        // bunny.scale = 0.5 + Math.random() * 0.5;
+                        // bunny.rotation = 360 * (Math.random() * 0.2 - 0.1);
                         parent[i].addChild(bunny);
                         count++;
                     }

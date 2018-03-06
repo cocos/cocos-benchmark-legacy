@@ -65,7 +65,7 @@ cc.Class({
         this.node.y = -320;
         this.node.anchorY = 1;
         //bunny.alpha = 0.3 + Math.random() * 0.7;
-        this.node.scale = 0.5;
-        this.node.rotation = 0;
+        // this.node.scale = 0.5;
+        // this.node.rotation = 0;
     },
 });
