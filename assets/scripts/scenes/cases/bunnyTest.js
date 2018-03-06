@@ -17,7 +17,10 @@ cc.Class({
     extends: baseRenderScene,
 
     properties: {
-        tex: cc.Texture2D,
+        tex: {
+            type : cc.Texture2D,
+            default: null,
+        },
         number: cc.Label
     },
 

@@ -7,7 +7,10 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        tex: cc.Texture2D,
+        tex: {
+            type: cc.Texture2D,
+            default: null,
+        },
     },
 
     // use this for initialization
