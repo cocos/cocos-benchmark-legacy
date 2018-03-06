@@ -100,9 +100,9 @@ cc.Class({
             }
             totalValue += value;
         }
-        maxValue = maxValue.toFixed(0);
-        minValue = minValue.toFixed(0);
-        avgValue = (totalValue / this.durationTimeArr.length).toFixed(0);
+        maxValue = Math.round(maxValue);
+        minValue = Math.round(minValue);
+        avgValue = Math.round(totalValue / this.durationTimeArr.length);
         result += `max time: ${maxValue}, min time: ${minValue}, avg time: ${avgValue}`;
         if (config.IS_AUTO_TESTING) {
             let testCaseInfo = config.TEST_CASE[config.CURRENT_CASE];

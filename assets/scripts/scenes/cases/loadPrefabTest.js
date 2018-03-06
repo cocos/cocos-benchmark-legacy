@@ -28,7 +28,7 @@ cc.Class({
                     let afterLoadTime = performance.now();
                     let gap_time = afterLoadTime - beforeLoadTime;
                     this.durationTimeArr.push(gap_time);
-                    this.labelLog.string += `loading ${++this.count}: ${gap_time.toFixed(0)}ms\n`;
+                    this.labelLog.string += `loading ${++this.count}: ${Math.round(gap_time)}ms\n`;
                     count --;
                     _releasePrefab(prefab);
                     if (count > 0) {

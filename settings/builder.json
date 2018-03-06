@@ -1,14 +1,13 @@
 {
   "appKey": "",
   "appSecret": "",
+  "encryptJs": true,
   "excludeScenes": [],
   "includeAnySDK": false,
   "includeSDKBox": false,
-  "includeSdk": [
-    "anysdk"
-  ],
   "inlineSpriteFrames": true,
   "inlineSpriteFrames_native": true,
+  "jailbreakPlatform": false,
   "md5Cache": false,
   "mergeStartScene": false,
   "oauthLoginServer": "",
@@ -24,5 +23,10 @@
   "renderMode": "0",
   "startScene": "733f06e0-5325-4bc4-9619-70d47062c947",
   "title": "PerformanceTest",
-  "webOrientation": "portrait"
+  "webOrientation": "portrait",
+  "wechatgame": {
+    "appid": "",
+    "orientation": "portrait"
+  },
+  "xxteaKey": "63b33e9e-ecd7-4f"
 }
