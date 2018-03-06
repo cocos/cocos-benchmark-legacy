@@ -52,7 +52,8 @@ cc.Class({
         let title = utils.createLabel(`${config.CURRENT_CASE + 1}. ${testCaseInfo.name}`);
         title.x = 0;
         title.y = 420;
-        title.zIndex = config.HIGHEST_ZINDEX;
+        // title.zIndex = config.HIGHEST_ZINDEX;
+        title.setSiblingIndex(config.HIGHEST_ZINDEX);
         title.parent = this.node;
 
         //test button
@@ -61,12 +62,14 @@ cc.Class({
             testBtn.parent = this.node;
             testBtn.x = -100;
             testBtn.y = 340;
-            testBtn.zIndex = config.HIGHEST_ZINDEX;
+            // testBtn.zIndex = config.HIGHEST_ZINDEX;
+            testBtn.setSiblingIndex(config.HIGHEST_ZINDEX);
             let closeBtn = utils.createButton("Back", spriteFrame, this.node, subScriptName, "onClickClose");
             closeBtn.parent = this.node;
             closeBtn.x = 100;
             closeBtn.y = 340;
-            closeBtn.zIndex = config.HIGHEST_ZINDEX;
+            // closeBtn.zIndex = config.HIGHEST_ZINDEX;
+            closeBtn.setSiblingIndex(config.HIGHEST_ZINDEX);
         });
 
         //test result
@@ -74,7 +77,8 @@ cc.Class({
         result.x = 0;
         result.y = -420;
         result.parent = this.node;
-        result.zIndex = config.HIGHEST_ZINDEX;
+        // result.zIndex = config.HIGHEST_ZINDEX;
+        result.setSiblingIndex(config.HIGHEST_ZINDEX);
         this.labelResult = result;
     },
 
@@ -96,9 +100,9 @@ cc.Class({
             }
             totalValue += value;
         }
-        maxValue = maxValue.toFixed(0);
-        minValue = minValue.toFixed(0);
-        avgValue = (totalValue / this.durationTimeArr.length).toFixed(0);
+        maxValue = Math.round(maxValue);
+        minValue = Math.round(minValue);
+        avgValue = Math.round(totalValue / this.durationTimeArr.length);
         result += `max time: ${maxValue}, min time: ${minValue}, avg time: ${avgValue}`;
         if (config.IS_AUTO_TESTING) {
             let testCaseInfo = config.TEST_CASE[config.CURRENT_CASE];

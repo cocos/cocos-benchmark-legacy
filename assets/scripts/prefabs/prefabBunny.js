@@ -8,7 +8,10 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        tex: cc.Texture2D,
+        tex: {
+            type: cc.Texture2D,
+            default: null,
+        },
     },
 
     // use this for initialization
@@ -51,8 +54,8 @@ cc.Class({
         this.node.y = maxY * 0.7;
         this.node.anchorY = 1;
         //bunny.alpha = 0.3 + Math.random() * 0.7;
-        this.node.scale = 0.5 + Math.random() * 0.5;
-        this.node.rotation = 360 * (Math.random() * 0.2 - 0.1);
+        // this.node.scale = 0.5 + Math.random() * 0.5;
+        // this.node.rotation = 360 * (Math.random() * 0.2 - 0.1);
     },
 
     update: function (dt) {

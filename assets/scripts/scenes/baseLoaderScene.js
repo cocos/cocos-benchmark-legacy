@@ -22,7 +22,7 @@ cc.Class({
     },
 
     resetTestConfig: function () {
-        this.beginTestTime = 5;
+        this.beginTestTime = 10;
     },
 
     autoStartTest: function () {
