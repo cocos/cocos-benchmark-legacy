@@ -207,7 +207,7 @@ config.setSceneArgs = function (testCaseInfo) {
 
 config.CURRENT_CASE = -1;
 
-config.HIGHEST_ZINDEX = 99999999;
+config.HIGHEST_ZINDEX = 65500;
 
 config.SCENE_ARGS = null;
 
