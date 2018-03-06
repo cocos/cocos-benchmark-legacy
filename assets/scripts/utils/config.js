@@ -108,10 +108,10 @@ config.TEST_CASE = [
         args: {
             windows_chrome: { count: 5000 },
             osx_chrome: { count: 5000 },
-            ios_safari: { count: 2600 },
-            ios_chrome: { count: 2600 },
-            android_chrome: { count: 1500 },
-            android_qq: { count: 1500 },
+            ios_safari: { count: 3000 },
+            ios_chrome: { count: 3000 },
+            android_chrome: { count: 2000 },
+            android_qq: { count: 2000 },
             default: { count: 5000 }
         },
         auto: true,
