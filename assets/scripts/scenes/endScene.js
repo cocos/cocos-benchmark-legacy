@@ -7,7 +7,7 @@ cc.Class({
 
     onLoad () {
         this.scheduleOnce(()=>{
-            window.location.replace(window.location.origin);
+            window.location.replace(window.location.origin + window.location.pathname);
         }, 1.0);
     },
 });
