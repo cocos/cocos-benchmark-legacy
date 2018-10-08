@@ -13,6 +13,11 @@ config.TEST_CASE = [
         scene: "bunnyTest", 
         auto: false, 
     },
+    { 
+        name: "3D Model Test", 
+        scene: "3DModelTest", 
+        auto: false, 
+    },
     {
         name: "Bunny Fixed Count Test",
         scene: "bunnyFixedCountTest",
