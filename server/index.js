@@ -23,7 +23,7 @@ function start_server() {
 		connection.query(sql_cmd, JSON.stringify(req.body), function (err, rows, fields) {
 			if (err) {
 				res.sendStatus(500);
-				throw err;
+				return console.error(err);
 			}
 			res.send(req.body);
 		});
@@ -38,7 +38,8 @@ function start_server() {
 		connection.query(sql_cmd, function (err, rows, fields) {
 			if (err) {
 				res.sendStatus(500);
-				throw err;
+				console.error(err);
+				return;
 			}
 			for (let i = 0; i < rows.length; i++) {
 				data.push(JSON.parse(rows[i].data));

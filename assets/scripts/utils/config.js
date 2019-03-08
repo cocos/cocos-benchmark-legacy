@@ -25,6 +25,7 @@ config.TEST_CASE = [
             android_qq: {count: 50},
             default: { count: 50}
         },
+        desc: '',
         auto: true, 
     },
     { 

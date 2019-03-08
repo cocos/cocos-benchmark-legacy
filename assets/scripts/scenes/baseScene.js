@@ -108,9 +108,10 @@ cc.Class({
             let testCaseInfo = config.TEST_CASE[config.CURRENT_CASE];
             config.AUTO_TEST_RESULT.data[testCaseInfo.index] = {
                 name: testCaseInfo.name,
+                desc: testCaseInfo.desc,
                 maxTime: maxValue,
                 minTime: minValue,
-                avgValue: avgValue
+                avgValue: avgValue,
             }
             config.AUTO_CASE_CURSOR ++;
             testCaseInfo = config.AUTO_TEST_CASE[config.AUTO_CASE_CURSOR];
