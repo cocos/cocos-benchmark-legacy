@@ -149,6 +149,14 @@ config.TEST_CASE = [
         scene: "uiTest",
         auto: true,
     },
+    {
+        name: "LoadResDir Test",
+        scene: "loadResDirTest",
+        args: {
+            default: { count: 20 }
+        },
+        auto: true,
+    }
 ];
 
 config.setSceneArgs = function (testCaseInfo) {
