@@ -27,7 +27,7 @@ cc.Class({
         }
     },
 
-    onClickTestCase: function (_, _2, data) {
+    onClickTestCase: function (_, data) {
         let testCaseIndex = parseInt(data);
         let testCaseInfo = config.TEST_CASE[testCaseIndex];
         if (!testCaseInfo) {
