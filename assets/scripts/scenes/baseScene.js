@@ -102,7 +102,7 @@ cc.Class({
         }
         maxValue = Math.round(maxValue);
         minValue = Math.round(minValue);
-        avgValue = Math.round(totalValue / this.durationTimeArr.length);
+        avgValue = totalValue / this.durationTimeArr.length;
         result += `max time: ${maxValue}, min time: ${minValue}, avg time: ${avgValue}`;
         if (config.IS_AUTO_TESTING) {
             let testCaseInfo = config.TEST_CASE[config.CURRENT_CASE];
@@ -111,7 +111,7 @@ cc.Class({
                 desc: testCaseInfo.desc,
                 maxTime: maxValue,
                 minTime: minValue,
-                avgValue: avgValue,
+                avgValue: Math.round(avgValue),
             }
             config.AUTO_CASE_CURSOR ++;
             testCaseInfo = config.AUTO_TEST_CASE[config.AUTO_CASE_CURSOR];
