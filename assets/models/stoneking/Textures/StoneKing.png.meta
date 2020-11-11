@@ -1,14 +1,18 @@
 {
-  "ver": "2.3.0",
+  "ver": "2.3.5",
   "uuid": "85e9e3ce-9987-4093-be99-9aefc63fcfc4",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
   "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 1024,
+  "height": 1024,
   "platformSettings": {},
   "subMetas": {
     "StoneKing": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "d8982761-9816-4e28-91d1-649e04d0bfd6",
       "rawTextureUuid": "85e9e3ce-9987-4093-be99-9aefc63fcfc4",
       "trimType": "auto",

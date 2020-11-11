@@ -1,12 +1,18 @@
 {
-  "ver": "2.1.0",
+  "ver": "2.3.5",
   "uuid": "4d2cd84d-fde9-498d-8261-68f590bc9b09",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 150,
+  "height": 150,
+  "platformSettings": {},
   "subMetas": {
     "indiwarrior_knife": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "be1e2554-9ffd-4e7e-8e87-aab04f08cb87",
       "rawTextureUuid": "4d2cd84d-fde9-498d-8261-68f590bc9b09",
       "trimType": "auto",

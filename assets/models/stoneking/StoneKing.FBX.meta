@@ -1,13 +1,15 @@
 {
-  "ver": "1.0.10",
+  "ver": "1.1.1",
   "uuid": "adea4328-72d0-4e82-926f-9a0abc76ccbe",
   "scaleFactor": 40,
+  "boneCount": 43,
   "precomputeJointMatrix": true,
   "animationFrameRate": 30,
   "subMetas": {
     "buffer.bin": {
       "ver": "1.0.0",
       "uuid": "4a813a3f-22d8-4967-9a4c-427804c1d6a9",
+      "name": "buffer.bin",
       "subMetas": {}
     },
     "StoneKing.mesh": {
@@ -16,6 +18,15 @@
       "verts": 3103,
       "tris": 2950,
       "submeshes": 1,
+      "attributes": [
+        [
+          "a_joints",
+          "a_normal",
+          "a_position",
+          "a_uv0",
+          "a_weights"
+        ]
+      ],
       "minPos": {
         "x": -0.0429911985993385,
         "y": -0.00969953555613756,
@@ -26,6 +37,7 @@
         "y": 0.0520500019192696,
         "z": 0.102153062820435
       },
+      "name": "StoneKing.mesh",
       "subMetas": {}
     },
     "Stone.mesh": {
@@ -34,6 +46,15 @@
       "verts": 215,
       "tris": 268,
       "submeshes": 1,
+      "attributes": [
+        [
+          "a_joints",
+          "a_normal",
+          "a_position",
+          "a_uv0",
+          "a_weights"
+        ]
+      ],
       "minPos": {
         "x": -0.0911236330866814,
         "y": -0.010383028537035,
@@ -44,20 +65,23 @@
         "y": 0.0303547438234091,
         "z": 0.104655310511589
       },
+      "name": "Stone.mesh",
       "subMetas": {}
     },
     "StoneKing-0.skeleton": {
       "ver": "1.0.1",
       "uuid": "e631b22b-6c1d-44bd-b9ae-230a50a0774f",
+      "name": "StoneKing-0.skeleton",
       "subMetas": {}
     },
     "StoneKing-1.skeleton": {
       "ver": "1.0.1",
       "uuid": "1402d739-7224-411c-96d4-eae0fc2e8a0f",
+      "name": "StoneKing-1.skeleton",
       "subMetas": {}
     },
     "StoneKing.prefab": {
-      "ver": "1.0.0",
+      "ver": "1.2.9",
       "uuid": "74d1c124-54bb-4e93-87ad-383e30238134",
       "optimizationPolicy": "AUTO",
       "asyncLoadAssets": false,
@@ -96,15 +120,6 @@
             "height": 36
           },
           "_children": [],
-          "_rotationX": 0,
-          "_rotationY": 0,
-          "_scaleX": 1,
-          "_scaleY": 1,
-          "_position": {
-            "__type__": "cc.Vec2",
-            "x": 0,
-            "y": 0
-          },
           "_skewX": 0,
           "_skewY": 0,
           "_localZOrder": 0,
@@ -121,6 +136,28 @@
           ],
           "_prefab": {
             "__id__": 3
+          },
+          "_eulerAngles": {
+            "__type__": "cc.Vec3",
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "_trs": {
+            "__type__": "TypedArray",
+            "ctor": "Float64Array",
+            "array": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1
+            ]
           }
         },
         {
@@ -158,11 +195,13 @@
           "fileId": "d7118yAG5lKybkFOAh8koPL"
         }
       ],
+      "name": "StoneKing.prefab",
       "subMetas": {}
     },
     "StoneKing.mtl": {
-      "ver": "1.0.1",
+      "ver": "1.0.3",
       "uuid": "37242a79-5ca9-408e-938e-866246240c3c",
+      "dataAsSubAsset": null,
       "name": "StoneKing.mtl",
       "subMetas": {}
     }

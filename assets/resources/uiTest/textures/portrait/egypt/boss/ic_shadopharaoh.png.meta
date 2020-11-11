@@ -1,12 +1,18 @@
 {
-  "ver": "2.1.0",
+  "ver": "2.3.5",
   "uuid": "a65ccbfc-46b5-4c44-b9ed-14cd621166a9",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 150,
+  "height": 150,
+  "platformSettings": {},
   "subMetas": {
     "ic_shadopharaoh": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "e8ec5c78-87e4-4d0b-8231-93d5bcba38fa",
       "rawTextureUuid": "a65ccbfc-46b5-4c44-b9ed-14cd621166a9",
       "trimType": "auto",
