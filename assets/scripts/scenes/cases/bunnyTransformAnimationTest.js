@@ -11,7 +11,8 @@ cc.Class({
 
     properties: {
         prefabBunny: cc.Prefab,
-        number: cc.Label
+        number: cc.Label,
+        button: cc.Button,
     },
 
     // use this for initialization
@@ -19,13 +20,14 @@ cc.Class({
         this._super(this.name.match(/<(\S*)>/)[1]);
 
         this.number.node.zIndex = config.HIGHEST_ZINDEX;
+        this.button.node.zIndex = config.HIGHEST_ZINDEX;
 
         this.reset();
     },
 
     reset: function () {
         this.bunnys = [];
-        
+
         bunnyType = 0;
         totalCount = config.SCENE_ARGS.count;
         count = 0;
@@ -47,5 +49,9 @@ cc.Class({
             bunnyType++;
             bunnyType %= 5;
         }
+    },
+
+    addItem: function (){
+        totalCount += 1000;
     },
 });
