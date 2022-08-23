@@ -2,7 +2,6 @@ let maxX = 0;
 let minX = 0;
 let maxY = 0;
 let minY = 0;
-let frameType = 0;
 
 cc.Class({
     extends: cc.Component,
