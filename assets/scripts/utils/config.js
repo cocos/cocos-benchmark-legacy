@@ -118,8 +118,10 @@ config.TEST_CASE = [
         auto: true,
     },
     {
-        name: "Bunny Transform Animation Test",
-        scene: "bunnyTransformAnimationTest",
+        // name: "Bunny Transform Animation Test",
+        // scene: "bunnyTransformAnimationTest",
+        name: "Bunny Frame No Render",
+        scene: "bunnyFrameNoRender",
         args: {
             windows_chrome: { count: 5000 },
             osx_chrome: { count: 5000 },
