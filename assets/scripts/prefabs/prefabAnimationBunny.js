@@ -8,11 +8,12 @@ cc.Class({
 
     properties: {
         bunnySpriteFrames:[cc.SpriteFrame],
+        frameType: 0,
     },
 
     // use this for initialization
     onLoad: function () {
-        this.schedule(this.changeSprite, 1, cc.macro.REPEAT_FOREVER, 1);
+        this.schedule(this.changeSprite, 1, cc.macro.REPEAT_FOREVER, 1)
     },
 
     init: function (bunnyType, aniType) {
