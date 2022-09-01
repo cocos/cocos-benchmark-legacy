@@ -13,7 +13,6 @@ cc.Class({
         prefabBunny: cc.Prefab,
         number: cc.Label,
         button: cc.Button,
-        // compType: cc.string = 'PrefabAnimationBunny',
     },
 
     // use this for initialization
@@ -41,8 +40,7 @@ cc.Class({
         if (this.bunnys.length < totalCount) {
             for (i = 0; i < amount; i++) {
                 bunny = cc.instantiate(this.prefabBunny);
-                bunny.getComponent("prefabAnimationBunny").init(bunnyType, 1);
-                // bunny.getComponent(this.compType).init(bunnyType, 1);
+                bunny.getComponent("prefabAnimationBunnyNoRender").init(bunnyType, 0);
                 this.node.addChild(bunny);
                 this.bunnys.push(bunny);
                 count++;
