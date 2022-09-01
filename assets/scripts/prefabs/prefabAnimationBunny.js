@@ -8,15 +8,12 @@ cc.Class({
 
     properties: {
         bunnySpriteFrames:[cc.SpriteFrame],
+        frameType: 0,
     },
 
     // use this for initialization
     onLoad: function () {
-        if (this.aniType === 0) {
-            this.node.getComponent(cc.Animation).play("bunnyTransform");    
-        }else if (this.aniType === 1) {
-            this.node.getComponent(cc.Animation).play("bunnyFrame");
-        }
+        this.schedule(this.changeSprite, 1, cc.macro.REPEAT_FOREVER, 1)
     },
 
     init: function (bunnyType, aniType) {
@@ -37,4 +34,11 @@ cc.Class({
         // this.node.scale = 0.5 + Math.random() * 0.5;
         // this.node.rotation = 360 * (Math.random() * 0.2 - 0.1);
     },
+
+    changeSprite() {
+        this.frameType++;
+        let type = this.frameType % 5;
+        let bunnySpriteFrame = this.bunnySpriteFrames[type];
+        this.node.getComponent(cc.Sprite).spriteFrame = bunnySpriteFrame;
+    }
 });
